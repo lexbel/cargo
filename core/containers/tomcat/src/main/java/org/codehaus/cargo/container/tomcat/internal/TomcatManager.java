@@ -710,7 +710,7 @@ public class TomcatManager extends LoggedObject
             }
         }
 
-        if (!response.startsWith("OK -"))
+        if (!response.contains("OK - "))
         {
             throw new TomcatManagerException("The Tomcat Manager responded \"" + response
                 + "\" instead of the expected \"OK\" message");
